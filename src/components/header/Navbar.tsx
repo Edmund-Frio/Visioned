@@ -24,8 +24,8 @@ export function Navbar() {
   ];
 
   return (
-    <div className="p-2">
-      <nav className="flex  justify-end gap-4">
+    <div className="p-2.5">
+      <nav className="flex  justify-end gap-16">
         {links.map((link) => (
           <NavLink className={link.className} to={link.to}>
             {link.name}
