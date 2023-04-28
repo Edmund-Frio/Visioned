@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-zinc-800/95 font-mono
+    @apply bg-[#212327] font-mono
   }
 }
 
 @layer components {
-  
+
 }

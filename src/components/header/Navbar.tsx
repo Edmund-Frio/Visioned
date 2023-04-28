@@ -1,35 +1,21 @@
 import { NavLink } from "react-router-dom";
+import { links } from "./NavbarData";
 
 export function Navbar() {
-  const styled = {
-    className: "text-neutral-400 font-medium hover:text-neutral-200",
-  };
-
-  const links = [
-    {
-      className: styled.className,
-      to: "/settings",
-      name: "Settings",
-    },
-    {
-      className: styled.className,
-      to: "/about",
-      name: "About",
-    },
-    {
-      className: styled.className,
-      to: "/account",
-      name: "Account",
-    },
-  ];
-
   return (
     <div className="p-2.5">
-      <nav className="flex  justify-end gap-16">
-        {links.map((link) => (
-          <NavLink className={link.className} to={link.to}>
-            {link.name}
+      <nav className="grid grid-flow-col justify-end gap-10">
+        <div>
+          <NavLink >
+
           </NavLink>
+        </div>
+        {links.map((link, index) => (
+          <div key={index}>
+            <NavLink className={link.className} to={link.path}>
+              {link.icon}
+            </NavLink>
+          </div>
         ))}
       </nav>
     </div>
