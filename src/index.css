@@ -4,10 +4,20 @@
 
 @layer base {
   body {
-    @apply bg-[#212327] font-mono
+    @apply font-mono;
+    background: theme('colors.background-color')
   }
 }
 
 @layer components {
-
+  .Navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+  .Markdown {
+    width: 55rem;
+    justify-self: center;
+    padding: 0 1rem;
+  }
 }
